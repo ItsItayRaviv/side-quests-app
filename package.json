@@ -1,0 +1,27 @@
+{
+  "name": "side-quests-app",
+  "version": "20.19.1",
+  "description": "",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "dev": "firebase emulators:start",
+    "build": "npm --prefix frontend run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsItayRaviv/side-quests-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ItsItayRaviv/side-quests-app/issues"
+  },
+  "homepage": "https://github.com/ItsItayRaviv/side-quests-app#readme",
+  "workspaces": [
+    "frontend",
+    "functions"
+  ]
+}
