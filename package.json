@@ -23,5 +23,8 @@
   "workspaces": [
     "frontend",
     "functions"
-  ]
+  ],
+  "dependencies": {
+    "firebase": "^11.7.1"
+  }
 }
