@@ -5,9 +5,15 @@ import './index.css';
 import './firebase';
 
 import App from './App.tsx';
+import { AuthProvider } from './contexts/AuthContext';
+import { RequireAuth } from './RequireAuth';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <AuthProvider>
+      <RequireAuth>
+        <App />
+      </RequireAuth>
+    </AuthProvider>
   </StrictMode>,
 );

@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": "true",
   "scripts": {
-    "dev": "firebase emulators:start",
+    "dev": "npm run build && firebase emulators:start",
     "build": "npm --prefix frontend run build"
   },
   "repository": {
