@@ -1,7 +1,7 @@
 // frontend/src/firebase.ts
 import { initializeApp } from 'firebase/app';
-import { getFunctions } from 'firebase/functions';
 import { getAuth } from 'firebase/auth';
+import { getFunctions } from 'firebase/functions';
 import {
   initializeFirestore,
   persistentLocalCache,
@@ -21,10 +21,15 @@ const firebaseConfig = {
 const app  = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
-export const functions = getFunctions(app);
-
+/**
+ * Creates a Firestore instance that:
+ *   • caches docs in IndexedDB
+ *   • keeps multiple browser tabs in sync
+ */
 export const db = initializeFirestore(app, {
   localCache: persistentLocalCache({
     tabManager: persistentMultipleTabManager(),
   }),
 });
+
+export const functions = getFunctions(app);
